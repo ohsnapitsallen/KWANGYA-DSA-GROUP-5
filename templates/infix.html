@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>KWANGYA Works</title>
+        <title>Infix to Postfix</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="color-scheme" content="light only" />
         <meta property="og:type" content="website" />
+        <meta property="og:description" content="basta" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1280" />
         <meta property="og:image:height" content="800" />
@@ -180,7 +181,7 @@
                 width: 100vw;
                 z-index: 0;
                 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20preserveAspectRatio%3D%22none%22%3E%20%3Cstyle%20type%3D%22text%2Fcss%22%3E%20path%20%7B%20fill%3A%20none%3B%20stroke%3A%20rgba(255,255,255,0.027)%3B%20stroke-width%3A%202.01px%3B%20stroke-linecap%3A%20round%3B%20stroke-linejoin%3A%20round%3B%20%7D%20%3C%2Fstyle%3E%20%3Cpath%20vector-effect%3D%22non-scaling-stroke%22%20d%3D%22M424%2C331.8c0%2C12.5-6.7%2C24.1-17.5%2C30.3l-132%2C76.2c-10.8%2C6.3-24.2%2C6.3-35%2C0l-132-76.2%20C96.7%2C355.8%2C90%2C344.3%2C90%2C331.8V179.2c0-12.5%2C6.7-24.1%2C17.5-30.3l132-76.2c10.8-6.3%2C24.2-6.3%2C35%2C0l132%2C76.2%20c10.8%2C6.3%2C17.5%2C17.8%2C17.5%2C30.3V331.8z%20M238.5%2C73l-256%2C147.6%20M273.5%2C439l252.1-145.4%20M256%2C634.7V378.3c0-12.5%2C6.7-24.1%2C17.5-30.3%20l252.1-145.4%20M256-122.7v256.4c0%2C12.5-6.7%2C24.1-17.5%2C30.3l-256%2C147.6%22%2F%3E%3C%2Fsvg%3E"),
-                    linear-gradient(to top, rgba(36, 36, 38, 0.871), rgba(36, 36, 38, 0.871)), url("/static/img/works.jpg");
+                    linear-gradient(to top, rgba(36, 36, 38, 0.871), rgba(36, 36, 38, 0.871)), url("/static/img/infix.jpg");
                 background-size: 395px, auto, cover;
                 background-position: center, 0% 0%, center;
                 background-repeat: repeat, repeat, repeat;
@@ -1984,38 +1985,33 @@
                     d="M35.8,36.5l-0.1,0.1c-0.6,0.6-1.6,0.6-2.3,0l-9.7-9.7c-1.9,1.2-4.2,1.9-6.6,1.9c-7,0-12.7-5.7-12.7-12.7 S9.9,3.4,17,3.4s12.7,5.7,12.7,12.7c0,3.4-1.3,6.4-3.4,8.7l9.5,9.5C36.4,34.9,36.4,35.9,35.8,36.5z M17,6.5c-5.3,0-9.6,4.3-9.6,9.6 s4.3,9.6,9.6,9.6s9.6-4.3,9.6-9.6S22.2,6.5,17,6.5z"
                 />
             </symbol>
-            <symbol id="icon-8384bbd04ffc9290cf5b544425eb4057" viewBox="0 0 40 40">
-                <path 
-                    d="M3.3,16.9c0.1,0.1,0.3,0.2,0.5,0.2h4.4c0.3,0,0.6-0.2,0.7-0.5c0.6-1.5,1-2.4,1.2-2.7c1.1-1.7,2.5-3.1,4.2-4.1S18,8.3,20,8.3 c1.5,0,2.9,0.3,4.3,0.8s2.6,1.3,3.7,2.3l-3.1,3.1c-0.3,0.3-0.4,0.6-0.4,1c0,0.4,0.1,0.7,0.4,1c0.3,0.3,0.6,0.4,1,0.4H36 c0.4,0,0.7-0.1,1-0.4c0.3-0.3,0.4-0.6,0.4-1V5.4c0-0.4-0.1-0.7-0.4-1C36.8,4.1,36.4,4,36,4c-0.4,0-0.7,0.1-1,0.4l-2.9,2.9 c-1.6-1.5-3.5-2.7-5.5-3.6s-4.2-1.3-6.4-1.3c-4.2,0-7.8,1.3-10.9,3.8s-5.1,5.8-6.1,9.9c0,0,0,0.1,0,0.2C3.1,16.6,3.1,16.7,3.3,16.9z M2.9,35.6C3.2,35.9,3.6,36,4,36s0.7-0.1,1-0.4l3-2.9c1.6,1.5,3.5,2.7,5.6,3.6s4.3,1.3,6.5,1.3c4.2,0,7.8-1.3,10.9-3.8 s5.2-5.8,6.2-9.9v-0.2c0-0.2-0.1-0.4-0.2-0.5s-0.3-0.2-0.5-0.2h-4.5c-0.3,0-0.6,0.2-0.7,0.5c-0.6,1.5-1,2.4-1.2,2.7 c-1.1,1.7-2.5,3.1-4.2,4.1c-1.8,1-3.7,1.5-5.7,1.5c-3.1,0-5.7-1-8-3.1l3.1-3.1c0.3-0.3,0.4-0.6,0.4-1s-0.1-0.7-0.4-1 c-0.3-0.3-0.6-0.4-1-0.4H4c-0.4,0-0.7,0.1-1,0.4s-0.4,0.6-0.4,1v10.2C2.5,35,2.6,35.3,2.9,35.6z">
-                </path></symbol>
         </svg>
         <div id="wrapper">
             <div id="main">
                 <div class="inner">
-                    <section id="works-section">
-                        <h1 id="text37" class="style1">KWANGYA&#39;s Programming Works</h1>
-                        <ul id="buttons03" class="style1 buttons">
+                    <section id="search-section">
+                        <h1 id="text03" class="style1">Enter an Infix Notation</h1>
+                        <form action="/postfix" enctype="multipart/form-data" id="form01" method="post">
+                            <div class="inner">
+                                <div class="field"><input type="text" name="enter-here" id="form01-enter-here" placeholder="Enter Here" maxlength="256" required /></div>
+                                <div class="field"><input type="text" name="www" id="form01-www" placeholder="Www" maxlength="128" /></div>
+                                <div class="actions"><button type="submit">Convert</button></div>
+                            </div>
+                            <input type="hidden" name="id" value="form01" />
+                        </form>
+                        <ul id="buttons10" class="style1 buttons">
                             <li>
-                                <a href="/searchalgorithm" class="button n01">
-                                    <svg><use xlink:href="#icon-1e6a79e1900cb033a0da29d025316541"></use></svg><span class="label">Search Algorithms</span>
+                                <a href="/works" class="button n01">
+                                    <svg><use xlink:href="#icon-fe5d5fdb64e50b34c3e536f93a94c91e"></use></svg><span class="label">Back</span>
                                 </a>
                             </li>
-                        </ul>
-                        <ul id="buttons03" class="style1 buttons">
                             <li>
-                                <a href="/infixtopostfix" class="button n01">
-                                    <svg><use xlink:href="#icon-8384bbd04ffc9290cf5b544425eb4057"></use></svg><span class="label">Infix to Postfix</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul id="buttons02" class="style1 buttons">
-                            <li>
-                                <a href="/" class="button n01">
+                                <a href="/" class="button n02">
                                     <svg><use xlink:href="#icon-2a747dd19e728944f8c54ef1b55a59c6"></use></svg><span class="label">Home</span>
                                 </a>
                             </li>
                         </ul>
-                        <h1 id="text39" class="style1">Song: aespa - Spicy</h1>
+                        <h1 id="text36" class="style1">Song: aespa - ICU</h1>
                     </section>
                 </div>
             </div>
@@ -3254,524 +3250,10 @@
                         }
                     },
                 };
-                function form(id, settings) {
-                    var _this = this;
-                    this.id = id;
-                    this.mode = settings.mode;
-                    this.method = settings.method;
-                    this.code = "code" in settings ? settings.code : null;
-                    this.success = settings.success;
-                    this.initHandler = "initHandler" in settings ? settings.initHandler : null;
-                    this.presubmitHandler = "presubmitHandler" in settings ? settings.presubmitHandler : null;
-                    this.failure = "failure" in settings ? settings.failure : null;
-                    this.optional = "optional" in settings ? settings.optional : [];
-                    this.events = "events" in settings ? settings.events : {};
-                    this.recaptcha = "recaptcha" in settings ? settings.recaptcha : null;
-                    this.collectTrackingParameters = "collectTrackingParameters" in settings ? settings.collectTrackingParameters : false;
-                    this.exportVariables = "exportVariables" in settings ? settings.exportVariables : false;
-                    this.$form = $("#" + this.id);
-                    this.$form.addEventListener("change", function (event) {
-                        if (event.target.tagName != "INPUT") return;
-                        _this.refreshInput(event.target);
-                    });
-                    this.$form.addEventListener("submit", function (event) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                        _this.triggerSubmit();
-                    });
-                    this.$form.addEventListener("reset", function (event) {
-                        setTimeout(function () {
-                            _this.refreshInputs();
-                        }, 0);
-                    });
-                    this.$form.addEventListener("keydown", function (event) {
-                        if (event.keyCode == 13 && event.ctrlKey) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                            _this.triggerSubmit();
-                        }
-                    });
-                    var x = $("#" + this.id + ' input[name="' + settings.hid + '"]');
-                    if (x) {
-                        x.disabled = true;
-                        x.parentNode.style.display = "none";
-                    }
-                    this.$submit = $("#" + this.id + ' .actions button[type="submit"]');
-                    this.$submit.disabled = false;
-                    this.initInputs();
-                    if (this.initHandler) {
-                        errors.handle(function (message) {
-                            return _this.failureHandler(message);
-                        });
-                        if (!this.initHandler()) errors.unhandle();
-                    }
-                    if (this.recaptcha) {
-                        grecaptcha.ready(function () {
-                            var id;
-                            id = grecaptcha.render(_this.$submit, {
-                                sitekey: _this.recaptcha.key,
-                                isolated: true,
-                                theme: _this.recaptcha.darkMode ? "dark" : "light",
-                                callback: function (token) {
-                                    _this.submit({ recaptchaToken: token }, ["g-recaptcha-response"]);
-                                    grecaptcha.reset(id);
-                                },
-                            });
-                        });
-                    }
-                }
-                form.prototype.completionHandler = function (properties, eventHandler, response) {
-                    if (eventHandler !== null) eventHandler.apply(this.$form, [response]);
-                    switch (properties.mode) {
-                        default:
-                        case 1:
-                            alert(this.expandVariables(properties.value));
-                            break;
-                        case 2:
-                            location.href = this.expandVariables(properties.value);
-                            break;
-                        case 3:
-                            properties.value.apply(this.$form, [response]);
-                            break;
-                        case 4:
-                            break;
-                    }
-                };
-                form.prototype.failureHandler = function (message) {
-                    var eventHandler;
-                    console.log("failed (" + message + ")");
-                    eventHandler = "onfailure" in this.events ? this.events.onfailure : null;
-                    if (message.match(/ALERT:/)) this.completionHandler({ mode: 1, value: message.substring(message.indexOf("ALERT:") + 7) }, eventHandler, null);
-                    else if (this.failure) this.completionHandler(this.failure, eventHandler, null);
-                    else this.completionHandler({ mode: 1, value: message }, eventHandler, null);
-                    this.waiting(false);
-                    errors.unhandle();
-                    return true;
-                };
-                form.prototype.finalizeInput = function (input) {
-                    try {
-                        if (!input || typeof input != "object" || !("name" in input)) throw "Not an input.";
-                        if (!("value" in input)) throw 'Missing "value" property.';
-                        if (input.type == "text" || input.type == "email" || input.type == "textarea" || input.type == "hidden") input.value = input.value.replace(/^\s+/, "").replace(/\s+$/, "");
-                    } catch (e) {}
-                };
-                form.prototype.getAmount = function () {
-                    var x;
-                    x = this.getRequiredInputValue("amount", ["select-one", "number"]);
-                    if (!x) return null;
-                    x = parseFloat(x);
-                    if (isNaN(x) || x < 1.0 || x > 100000.0) return null;
-                    return x;
-                };
-                form.prototype.getEmail = function () {
-                    return this.getRequiredInputValue("email", "email");
-                };
-                form.prototype.getQuantity = function () {
-                    var x;
-                    x = this.getRequiredInputValue("quantity", ["select-one", "number"]);
-                    if (!x) return null;
-                    x = parseInt(x);
-                    if (isNaN(x) || x < 1 || x > 100000) return null;
-                    return x;
-                };
-                form.prototype.getRequiredInputValue = function (name, type) {
-                    var input;
-                    for (input of this.$form.elements) {
-                        if (((Array.isArray(type) && type.includes(input.type)) || input.type == type) && input.name == name && input.value !== "" && input.value !== null) return input.value;
-                    }
-                    return null;
-                };
-                form.prototype.initInputs = function () {
-                    var _this = this,
-                        i,
-                        input;
-                    for (i = 0; i < this.$form.elements.length; i++) {
-                        input = this.$form.elements[i];
-                        switch (input.type) {
-                            case "number":
-                                (function (input) {
-                                    var p = input.parentNode,
-                                        decrement = p.querySelector("button.decrement"),
-                                        increment = p.querySelector("button.increment");
-                                    input.addEventListener("blur", function (event) {
-                                        _this.normalizeNumberInput(input);
-                                    });
-                                    if (decrement && increment) {
-                                        decrement.addEventListener("click", function (event) {
-                                            event.preventDefault();
-                                            _this.normalizeNumberInput(input);
-                                            input.stepDown(1);
-                                            _this.normalizeNumberInput(input);
-                                        });
-                                        increment.addEventListener("click", function (event) {
-                                            event.preventDefault();
-                                            _this.normalizeNumberInput(input);
-                                            input.stepUp(1);
-                                            _this.normalizeNumberInput(input);
-                                        });
-                                    }
-                                })(input);
-                                break;
-                            case "file":
-                                (function (input) {
-                                    var p = input.parentNode,
-                                        select = p.querySelector("button.select");
-                                    select.addEventListener("click", function (event) {
-                                        event.preventDefault();
-                                        input.click();
-                                    });
-                                    input.addEventListener("focus", function (event) {
-                                        event.target.parentNode.classList.add("focus");
-                                    });
-                                    input.addEventListener("blur", function (event) {
-                                        event.target.parentNode.classList.remove("focus");
-                                    });
-                                })(input);
-                                break;
-                            case "text":
-                            case "textarea":
-                            case "email":
-                                input.addEventListener("blur", function (event) {
-                                    this.value = this.value.replace(/^\s+/, "").replace(/\s+$/, "");
-                                });
-                                break;
-                        }
-                        this.refreshInput(input);
-                    }
-                };
-                form.prototype.isAllowedInput = function (input, ignore) {
-                    try {
-                        if (!input || typeof input != "object" || !("name" in input)) throw "Not an input.";
-                        if (ignore && ignore.indexOf(input.name) != -1) throw "Input is ignored.";
-                        if (input.disabled) throw "Input is disabled.";
-                        switch (input.type) {
-                            case "text":
-                            case "email":
-                            case "textarea":
-                            case "select-one":
-                            case "checkbox":
-                            case "number":
-                            case "tel":
-                            case "file":
-                            case "hidden":
-                                break;
-                            default:
-                                throw "Not an allowed input.";
-                        }
-                    } catch (e) {
-                        return false;
-                    }
-                    return true;
-                };
-                form.prototype.isValidInput = function (input) {
-                    var result = false;
-                    switch (input.type) {
-                        case "email":
-                            result = input.value.match(new RegExp("^([a-zA-Z0-9\\_\\-\\.\\+]+)@([a-zA-Z0-9\\-\\.]+)\\.([a-zA-Z]+)$"));
-                            break;
-                        case "select-one":
-                            result = input.value.match(new RegExp("^[^\\<\\>]+$"));
-                            break;
-                        case "checkbox":
-                            result = true;
-                            break;
-                        case "number":
-                            result = input.value.match(new RegExp("^[0-9\\-\\.]+$"));
-                            break;
-                        case "tel":
-                            result = input.value.match(new RegExp("^[0-9\\-\\+\\(\\)\\ \\#\\*]+$"));
-                            break;
-                        case "file":
-                            result = true;
-                            break;
-                        default:
-                        case "text":
-                        case "textarea":
-                        case "hidden":
-                            result = true;
-                            break;
-                    }
-                    return result;
-                };
-                form.prototype.normalizeNumberInput = function (input) {
-                    var min = parseFloat(input.min),
-                        max = parseFloat(input.max),
-                        step = parseFloat(input.step),
-                        v = parseFloat(input.value);
-                    if (isNaN(v)) {
-                        if (!input.required) {
-                            input.value = null;
-                            return;
-                        }
-                        v = isNaN(min) ? 0 : min;
-                    }
-                    if (!isNaN(min) && v < min) v = min;
-                    if (!isNaN(max) && v > max) v = max;
-                    if (!isNaN(step) && v % step !== 0) v = Math.round(v / step) * step;
-                    switch (input.dataset.category) {
-                        case "currency":
-                            v = parseFloat(v).toFixed(2);
-                            break;
-                        default:
-                        case "decimal":
-                            v = parseFloat(v);
-                            break;
-                        case "integer":
-                            v = parseInt(v);
-                            break;
-                    }
-                    input.value = v;
-                };
-                form.prototype.expandVariables = function (s) {
-                    if (typeof variables === "undefined") return s;
-                    if (variables.hasVariables(s)) {
-                        for (input of this.$form.elements) {
-                            if (!this.isAllowedInput(input)) continue;
-                            value = "";
-                            if (this.isValidInput(input)) {
-                                switch (input.type) {
-                                    case "checkbox":
-                                        value = input.checked ? "true" : "false";
-                                        break;
-                                    case "email":
-                                    case "select-one":
-                                    case "number":
-                                    case "tel":
-                                    case "text":
-                                    case "textarea":
-                                    case "hidden":
-                                        value = input.value;
-                                        break;
-                                    default:
-                                        value = "";
-                                        break;
-                                }
-                            } else value = "";
-                            if (!!s.match(/^(#[a-zA-Z0-9\_\-]+|[a-z0-9\-\.]+:[a-zA-Z0-9\~\!\@\#$\%\&\-\_\+\=\;\,\.\?\/\:\{\}\|]+)$/)) value = encodeURIComponent(value);
-                            s = variables.expandVariable(s, input.name, value);
-                        }
-                    }
-                    s = variables.expandVariableString(this.$form, s);
-                    return s;
-                };
-                form.prototype.exportVariableValues = function (source, values, suffix) {
-                    if (typeof variables === "undefined" || this.exportVariables !== true) return;
-                    variables.import(source + (suffix ? suffix : ""), values);
-                    variables.purge("form" + (suffix ? suffix : ""));
-                    variables.import("form" + (suffix ? suffix : ""), values);
-                };
-                form.prototype.pause = function (values, handler) {
-                    var _this = this;
-                    this.waiting(true);
-                    db.open("formData", function (objectStore) {
-                        db.delete(objectStore, _this.id, function () {
-                            db.put(objectStore, values, function () {
-                                handler.call(_this);
-                            });
-                        });
-                    });
-                };
-                form.prototype.refreshInput = function (input) {
-                    var a = [],
-                        p;
-                    switch (input.type) {
-                        case "file":
-                            p = input.parentNode;
-                            if (input.files.length > 0) p.setAttribute("data-filename", input.files[0].name);
-                            else p.setAttribute("data-filename", "");
-                            break;
-                        default:
-                            break;
-                    }
-                };
-                form.prototype.refreshInputs = function () {
-                    var i;
-                    for (i = 0; i < this.$form.elements.length; i++) this.refreshInput(this.$form.elements[i]);
-                };
-                form.prototype.resume = function (handler) {
-                    var _this = this;
-                    this.waiting(true);
-                    this.scrollIntoView();
-                    db.open("formData", function (objectStore) {
-                        db.get(objectStore, _this.id, function (values) {
-                            db.delete(objectStore, _this.id, function () {
-                                var e, i, v;
-                                for (i in _this.$form.elements) {
-                                    e = _this.$form.elements[i];
-                                    if (!e.name) continue;
-                                    v = e.name in values ? values[e.name] : null;
-                                    switch (e.type) {
-                                        case "checkbox":
-                                            e.checked = v == "checked" ? true : false;
-                                            break;
-                                        case "file":
-                                            if (v) e.parentNode.setAttribute("data-filename", v.name);
-                                            break;
-                                        default:
-                                            e.value = v;
-                                            break;
-                                    }
-                                }
-                                handler.call(_this, values);
-                            });
-                        });
-                    });
-                };
-                form.prototype.scrollIntoView = function () {
-                    window.scrollTo(0, this.$form.offsetTop);
-                };
-                form.prototype.submit = function (values, ignore) {
-                    var _this = this,
-                        input,
-                        result,
-                        _success,
-                        _failure,
-                        a,
-                        b,
-                        i,
-                        e,
-                        fd,
-                        k,
-                        x,
-                        usp;
-                    try {
-                        for (input of this.$form.elements) {
-                            if (!this.isAllowedInput(input, ignore)) continue;
-                            if (this.optional.indexOf(input.name) !== -1 && (input.value === "" || input.value === null || (input.type == "checkbox" && !input.checked))) continue;
-                            this.finalizeInput(input);
-                            if (!this.isValidInput(input)) throw "Not valid.";
-                        }
-                    } catch (e) {
-                        alert("Missing or invalid fields. Please try again.");
-                        return;
-                    }
-                    if ("onsubmit" in this.events) {
-                        if (this.events.onsubmit.apply(this.$form) === false) return;
-                    }
-                    a = this.values();
-                    if (values) {
-                        for (k in values) a[k] = values[k];
-                    }
-                    if (this.collectTrackingParameters) {
-                        usp = new URLSearchParams(window.location.search);
-                        b = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
-                        for (k of b) {
-                            x = usp.get(k);
-                            if (x && x.match(/^[a-zA-Z0-9\-\_\%\+\s]+$/) && x.length <= 256) a[k] = x;
-                        }
-                    }
-                    switch (this.method) {
-                        default:
-                        case "ajax":
-                            break;
-                        case "get":
-                        case "post":
-                            this.$form.submit();
-                            return;
-                        case "code":
-                            if (typeof this.code == "function") {
-                                this.waiting(true);
-                                _success = function () {
-                                    _this.exportVariableValues(_this.id, a);
-                                    _this.completionHandler(_this.success, "onsuccess" in _this.events ? _this.events.onsuccess : null, null);
-                                    _this.waiting(false);
-                                };
-                                _failure = function () {
-                                    _this.completionHandler(_this.failure, "onfailure" in _this.events ? _this.events.onfailure : null, null);
-                                    _this.waiting(false);
-                                };
-                                result = this.code.apply(this.$form, [_success, _failure]);
-                                if (result === true) _success();
-                                else if (result === false) _failure();
-                            }
-                            return;
-                    }
-                    if ((x = $(":focus"))) x.blur();
-                    errors.handle(function (message) {
-                        return _this.failureHandler(message);
-                    });
-                    if (this.presubmitHandler) this.presubmitHandler.call(this, a);
-                    else this.submitHandler(a);
-                };
-                form.prototype.submitHandler = function (values) {
-                    var _this = this,
-                        x,
-                        k,
-                        data;
-                    this.waiting(true);
-                    data = new FormData();
-                    for (k in values) {
-                        if (values[k] && typeof values[k] == "object" && "blob" in values[k]) data.append(k, values[k].blob, values[k].name);
-                        else data.append(k, values[k]);
-                    }
-                    x = new XMLHttpRequest();
-                    x.open("POST", ["", "post", this.mode].join("/"));
-                    x.send(data);
-                    x.onreadystatechange = function () {
-                        var o;
-                        if (x.readyState != 4) return;
-                        if (x.status != 200) throw new Error("Failed server response (" + x.status + ")");
-                        try {
-                            o = JSON.parse(x.responseText);
-                        } catch (e) {
-                            throw new Error("Invalid server response");
-                        }
-                        if (!("result" in o) || !("message" in o)) throw new Error("Incomplete server response");
-                        if (o.result !== true) throw new Error(o.message);
-                        _this.exportVariableValues(_this.id, values);
-                        if ("response" in o) _this.exportVariableValues(_this.id, o.response, "_response");
-                        _this.completionHandler(_this.success, "onsuccess" in _this.events ? _this.events.onsuccess : null, "response" in o ? o.response : null);
-                        _this.$form.reset();
-                        _this.waiting(false);
-                        errors.unhandle();
-                    };
-                };
-                form.prototype.triggerSubmit = function () {
-                    if (this.recaptcha) this.$submit.click();
-                    else if (!this.$submit.disabled) this.submit();
-                };
-                form.prototype.values = function () {
-                    var a = {};
-                    for (i in this.$form.elements) {
-                        e = this.$form.elements[i];
-                        if (!e.name || !e.value) continue;
-                        switch (e.type) {
-                            case "checkbox":
-                                a[e.name] = e.checked ? "checked" : null;
-                                break;
-                            case "file":
-                                a[e.name] = { name: e.files[0].name, blob: new Blob([e.files[0]], { type: e.files[0].type }) };
-                                break;
-                            default:
-                                a[e.name] = e.value;
-                                break;
-                        }
-                    }
-                    a["id"] = this.id;
-                    return a;
-                };
-                form.prototype.waiting = function (x) {
-                    var _this = this;
-                    if (x) {
-                        $body.classList.add("is-instant");
-                        this.$submit.disabled = true;
-                        this.$submit.classList.add("waiting");
-                        if (this.recaptcha)
-                            setTimeout(function () {
-                                _this.$submit.disabled = true;
-                            }, 0);
-                    } else {
-                        $body.classList.remove("is-instant");
-                        this.$submit.classList.remove("waiting");
-                        this.$submit.disabled = false;
-                    }
-                };
-                new form("form01", { mode: "custom", method: "ajax", hid: "www", success: { mode: 1, value: "Thank you! :)" }, failure: { mode: 1, value: "Sorry, something went wrong. Please try again later." }, optional: [] });
-                onvisible.add(".container.style1", { style: "fade-in", speed: 1000, intensity: 5, threshold: 1, delay: 0, state: true, replay: false });
             })();
         </script>
         <audio autoplay loop>
-            <source src="{{ url_for('static', filename='mp3/works.mp3') }}" type="audio/mpeg">
+            <source src="{{ url_for('static', filename='mp3/infix.mp3') }}" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>  
     </body>
