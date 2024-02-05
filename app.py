@@ -1,8 +1,14 @@
 from flask import Flask, render_template, request
 from TestData import *
+from infixtopostfix import *
+from hash import *
+from MRTLRT import *
+from Sorting import *
 import time
 
 app = Flask(__name__)
+string_queue = []
+hash_table = HashTable()
 
 def measure_time(search_function, data_set, target_element):
     start_time = time.time()
@@ -10,6 +16,12 @@ def measure_time(search_function, data_set, target_element):
     end_time = time.time()
     elapsed_time = end_time - start_time
     return result, elapsed_time
+
+@app.context_processor
+def utility_processor():
+    def enumerate(list_of_items):
+        return zip(range(len(list_of_items)), list_of_items)
+    return dict(enumerate=enumerate)
 
 @app.route('/')
 def show_index():
@@ -82,6 +94,107 @@ def search():
                            exponentialsearch_result=exponentialsearch_result, exponentialsearch_time=exponentialsearch_time,
                            interpolationsearch_result=interpolationsearch_result, interpolationsearch_time=interpolationsearch_time,
                            ternarysearch_result=ternarysearch_result, ternarysearch_time=ternarysearch_time)
+
+@app.route('/infixtopostfix')
+def infix():
+    return render_template('infix.html')
+
+@app.route('/postfix', methods=['POST'])
+def postfix():
+    infix_expression = request.form['enter-here']
+    postfix_steps = infix_to_postfix(infix_expression)
+    return render_template('postfix.html', postfix_steps=postfix_steps)
+
+@app.route('/queuedequeue')
+def queuedequeue():
+    return render_template('queuedequeue.html', queue=string_queue)
+
+@app.route('/newqueue', methods=['POST'])
+def newqueue():
+    user_input = request.form['enter-here']
+
+    if 'queue_button' in request.form:
+        string_queue.append(user_input)
+        dequeued_item = None
+    elif 'dequeue_button' in request.form:
+        if user_input in string_queue:
+            string_queue.remove(user_input)
+            dequeued_item = user_input
+        else:
+            dequeued_item = None
+
+    return render_template('queuedequeue.html', queue=string_queue, dequeued_item=dequeued_item)
+
+@app.route('/hashtable')
+def input():
+    return render_template('input.html')
+
+@app.route('/hashtableoutput', methods=['POST'])
+def output():
+    hash_function = request.form['hash_function']
+    num_commands = int(request.form['num_commands'])
+    commands = request.form['commands'].splitlines()
+
+    hash_table = HashTable()
+    for command in commands:
+        if command.startswith('del '):
+            word = command[4:]
+            hash_table.delete(word, getattr(hash_table, hash_function))
+        else:
+            hash_table.insert(command, getattr(hash_table, hash_function))
+
+    return render_template('output.html', hash_table=hash_table)
+
+@app.route('/graph')
+def GraphInput():
+    return render_template('graph.html', stations=stations)
+
+@app.route('/graphresult', methods=['POST'])
+def shortest_path():
+    source_station = request.form['source']
+    target_station = request.form['target']
+
+    shortest_path_result = find_shortest_path(LRTMRT, source_station, target_station)
+
+    return render_template('graph.html', stations=stations, source=source_station, target=target_station, shortest_path=shortest_path_result)
+
+def parse_elements(elements_str):
+    elements = elements_str.split('\n')
+    parsed_elements = []
+    for element in elements:
+        element = element.strip()
+        if element:
+            try:
+                parsed_element = int(element)
+            except ValueError:
+                parsed_element = element
+            parsed_elements.append(parsed_element)
+    return parsed_elements
+
+@app.route('/sorting')
+def Sorter():
+    return render_template('sorting.html')
+
+@app.route('/sort', methods=['POST'])
+def sort():
+    elements_str = request.form.get('elements')
+    elements = parse_elements(elements_str)
+    
+    algorithm = request.form.get('algorithm')
+    sorted_elements = []
+    
+    if algorithm == 'bubble':
+        sorted_elements = bubble_sort(elements.copy())
+    elif algorithm == 'quick':
+        sorted_elements = quick_sort(elements.copy())
+    elif algorithm == 'merge':
+        sorted_elements = merge_sort(elements.copy())
+    elif algorithm == 'selection':
+        sorted_elements = selection_sort(elements.copy())
+    elif algorithm == 'insertion':
+        sorted_elements = insertion_sort(elements.copy())
+    
+    return render_template('sorting.html', elements=elements, sorted_elements=sorted_elements, selected_algorithm=algorithm)
 
 if __name__ == '__main__':
     app.run(debug=True)
